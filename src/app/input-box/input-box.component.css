@@ -1,0 +1,24 @@
+input[type="date"] {
+    position: relative;
+    padding: 10px;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+  }
+  
+  input[type="date"]:before {
+    color: transparent;
+    background: none;
+    display: block;
+    font-family: 'FontAwesome';
+    content: '\f073';
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    color: #999;
+  }

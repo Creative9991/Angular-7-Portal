@@ -1,0 +1,182 @@
+<!-- Applicant Form Html Pages-->
+
+<div class="well text-center">
+  <h3>New Applicant's Details</h3>
+</div>
+   <div class="row">
+
+     <!--Request Number-->
+
+    <div class="col-lg-3">
+      <app-input-box [label]="'Request Number'" [id]="'requestnumber'" [type]="'number'">
+      </app-input-box>
+    </div>
+   </div>
+  <div class="row">
+
+  <!--Applicant Name(Firstname + Lastname)-->
+
+   <div class="col-lg-4">
+    <app-input-box [label]="'Applicant Name'" [id]="'applicantname'" [type]="'text'"> 
+    </app-input-box>
+   </div>
+
+   <!--Date Received-->
+
+   <div class="col-lg-4">
+    <label>Date Received</label>
+     <mat-form-field>
+      <input matInput [matDatepicker]="datereceived">
+      <mat-datepicker-toggle matSuffix [for]="datereceived"></mat-datepicker-toggle>
+      <mat-datepicker #datereceived></mat-datepicker>
+     </mat-form-field>
+   </div>
+
+   <!--Status/Information About Status Input-->  
+
+   <div class="col-lg-4">
+    <app-select-box [selectData]='status'></app-select-box>
+   </div>
+</div>
+<div class="row">
+
+  <!--Affiliation/Information About Affiliation Input-->
+ <!--
+  <div class="col-lg-3">
+   <app-select-box [selectData]='affiliation'></app-select-box>
+  </div>
+    -->
+
+  <!--Position/Information About Position Input-->
+
+  <div class="col-lg-4">
+   <app-select-box [selectData]='position'></app-select-box>
+  </div>
+
+  <!--Alternative Position/Information about Alternative Position Input-->
+
+  <div class="col-lg-4">
+   <app-select-box [selectData]='AlternativePosition'></app-select-box>
+  </div>
+
+  <!--Team/Information About Team Input-->
+
+  <div class="col-lg-4">
+   <app-select-box [selectData]='Team'></app-select-box>
+  </div>
+</div>
+
+  <!-- Reviewed by Soyal-->
+
+<div class="row">
+  <!--
+ <div class="col-lg-4">
+  <app-select-box [selectData]='ReviewedBySoyal'></app-select-box>
+ </div>-->
+
+  <!-- Reviewed By Soyal Date-->
+<!--
+ <div class="col-lg-4">
+    <label>Reviewed by Soyal Date</label>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+ </div>
+-->
+ <!--Sent to Dept/Information About Department -->
+
+ <div class="col-lg-4">
+  <app-select-box [selectData]='Senttodept'></app-select-box>
+ </div>
+  <!--Assigned to-->
+
+<div class="col-lg-4">
+    <app-select-box [selectData]='Assigned'></app-select-box>
+  </div>
+  
+  <!--From A Recruiter -->
+  
+  <div class="col-lg-4">
+    <app-select-box [selectData]='FromARecruiter'></app-select-box>
+  </div>
+</div>
+
+<div class="row">
+
+ <!--Is the Candidate out of State -->
+
+<div class="col-lg-4">
+  <app-select-box [selectData]='OutOfState'></app-select-box>
+</div>
+
+<div class="col-lg-4">
+    <app-select-box [selectData]='InterviewPanel'></app-select-box>
+  </div>
+ 
+<!--1:1 30 Minutes -->
+
+  <div class="col-lg-4">
+    <app-select-box [selectData]='Minutes'></app-select-box>
+  </div>
+</div>
+
+<!--Members Of the Interview Panel -->
+
+<div class="row">
+  
+  <!--Has the candiate Summary Analysis Been Completed -->
+
+  <div class="col-lg-4">
+    <app-select-box [selectData]='SummaryCompleted'></app-select-box>
+  </div>
+</div>
+
+<!--Uploading Resume -->
+
+<div class="row">
+  <div class="col-lg-4">
+      <label for="file">Upload Resume</label>
+      <input type="file" id="file" name="file" multiple>
+  </div>
+
+  <!--Uploading Other Files -->
+
+<!--div class="col-lg-4">
+  <label for="file">Upload Other Documents</label>
+  <input type="file" id="file" name="file" multiple>
+</div>-->
+
+</div><br>
+<div class="row">
+
+  <!--Comments & Feedback-->
+
+ <div class="col-lg-12">
+  <app-text-area  [id]="'Comments'" [label]="'Comments:-'"></app-text-area>
+  <app-text-area  [id]="'Feedback'" [label]="'Feedback:-'"></app-text-area>
+ </div>
+</div>
+<div class="row">
+
+  <!--Interviews-->
+
+ <div class="col-lg-12">
+ <label for="Interviews">Interviews:-</label>
+
+  <!--Table Dispaly-->
+
+  <app-displaytable></app-displaytable>
+ </div>
+</div>
+<br>
+<div class="row">
+  
+  <!--Submit & Cancel Buttons-->
+ <div class="col-lg-12 centerPadding">
+  <button type="button" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-danger">Cancel</button> 
+ </div>
+</div>
+<br>

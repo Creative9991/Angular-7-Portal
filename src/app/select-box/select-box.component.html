@@ -1,0 +1,7 @@
+<div *ngIf="selectData" class="form-group">
+  <label>{{selectData.name}}</label>
+  <input attr.list="{{selectData.id}}" name="{{selectData.name}}" class="form-control"  [(ngModel)]="ivalue">
+  <datalist id="{{selectData.id}}">
+    <option *ngFor="let item of selectData.values" value="{{item}}"></option>
+  </datalist>
+</div>

@@ -1,0 +1,13 @@
+.topMarging24{
+    margin-top:24px;
+}
+.removeColor{
+    color:#c00
+}
+.addremovedata{
+    height: 250px;
+    overflow-y: scroll;
+}
+.col-lg-12{
+    text-align: center;
+}

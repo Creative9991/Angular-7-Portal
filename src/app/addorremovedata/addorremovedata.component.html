@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-lg-3">
+  </div>
+  <div class="col-lg-3">
+    <div class="form-group">
+      <label for="statusval">{{datavalue.name}} value:</label>
+      <input type="text" class="form-control" [(ngModel)]="newvalue" id="{{datavalue.id}}_add">
+    </div>
+  </div>
+  <!-- Add Button -->
+  <div class="col-lg-3">
+    <button type="button" class="btn btn-primary topMarging24" (click)="addData()">add</button>
+  </div>
+</div>
+<div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-6">
+      <ul class="addremovedata list-group">
+        <li  *ngFor="let item of datavalue.values" class="list-group-item">
+             {{item}}
+           <button type="button" class="btn btn-default pull-right" (click)="removeData(item)">
+                 <span class="glyphicon glyphicon-remove removeColor"></span> 
+           </button>
+           <div class="clearfix"></div>
+        </li>
+      </ul>
+      <!--Submit-->
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-danger">Submit</button>
+      </div>
+   </div>
+</div>

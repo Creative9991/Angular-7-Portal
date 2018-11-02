@@ -1,0 +1,21 @@
+
+
+hot-table>.handsontable{
+    height: 150px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+.wtHolder{
+    position: relative !important;
+    width: 100% !important;
+    height: 150px !important;
+}
+.topPadding{
+    padding-top:20px;
+}
+.centerPadding{
+    padding-left: 45%;
+}
+mat-form-field{
+    width: 359px;
+}

@@ -1,0 +1,88 @@
+import { Injectable } from '@angular/core';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
+@Injectable()
+export class LocaldatasericeService implements InMemoryDbService {
+  createDb() {
+    const tabledataObject = [{
+      id: 1,
+      interviewdate: '12/19/2017',
+      interviewtime: '8.30AM',
+      interviewtype: 'Phone',
+      primaryinterviewer: 'Michael Phipps'
+    },
+    {
+      id: 2,
+      interviewdate: '01/19/2018',
+      interviewtime: '9.30AM',
+      interviewtype: 'Skype',
+      primaryinterviewer: 'Frances Donio'
+    },
+    {
+      id: 3,
+      interviewdate: '01/06/2018',
+      interviewtime: '11.30AM',
+      interviewtype: 'In-person',
+      primaryinterviewer: 'Jeannine Linsday'
+    },
+    {
+      id: 4,
+      interviewdate: '01/09/2018',
+      interviewtime: '9.40AM',
+      interviewtype: 'Skype',
+      primaryinterviewer: 'Matt Greathouse'
+    }
+    ]
+    const existingApplicantObj = [{
+      id: 1,
+      name: 'Christopher',
+      skill: 'BAC'
+    },
+    {
+      id: 2,
+      name: 'Alfred',
+      skill: 'Manager'
+    },
+    {
+      id: 3,
+      name: 'James',
+      skill: 'Analyst-IV'
+    },
+    {
+      id: 4,
+      name: 'Tom',
+      skill: 'R&D'
+    },
+    {
+      id: 5,
+      name: 'Roger',
+      skill: 'Analyst-I'
+    }
+    ]
+    const loginContent = [{
+      username: 'user1',
+      password: 'user1'
+    },
+    {
+      username: 'user2',
+      password: 'user2'
+    },
+    {
+      username: 'user3',
+      password: 'user3'
+    },
+    {
+      username: 'user4',
+      password: 'user4'
+    },
+    {
+      username: 'user5',
+      password: 'user5'
+    },
+    {
+      username: 'user6',
+      password: 'user6'
+    }]
+    return { 'tabledataObject':tabledataObject,'existingApplicantObj':existingApplicantObj,'loginContent':loginContent };
+  }
+}

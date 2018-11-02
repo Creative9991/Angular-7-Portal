@@ -1,0 +1,59 @@
+   <!-- Display Table of Content -->
+    
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [(dataSource)]="dataSource">
+
+    <!-- Id -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Interview date -->
+    <ng-container matColumnDef="Interview date">
+      <mat-header-cell *matHeaderCellDef> Interview date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.interviewdate}} </mat-cell>
+    </ng-container>
+
+    <!-- Interview Time -->
+    <ng-container matColumnDef="Interview time">
+      <mat-header-cell *matHeaderCellDef> Interview time </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.interviewtime}} </mat-cell>
+    </ng-container>
+
+    <!-- Interview type -->
+    <ng-container matColumnDef="Interview type">
+      <mat-header-cell *matHeaderCellDef> Interview type </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.interviewtype}} </mat-cell>
+    </ng-container>
+
+    <!-- Primary Interviewer-->
+    <ng-container matColumnDef="Primary interviewer">
+      <mat-header-cell *matHeaderCellDef> Primary interviewer </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.primaryinterviewer}} </mat-cell>
+    </ng-container>
+
+    <!-- Edit Sec -->
+    <ng-container matColumnDef="Edit sec">
+      <mat-header-cell *matHeaderCellDef>Edit sec &nbsp;
+        <app-datadialog [tableContent]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)"
+        [isEditsec]='false'></app-datadialog>
+       </mat-header-cell>
+       <mat-cell *matCellDef="let element">
+        <app-datadialog [tableContent]="dataSource" [itemid]="element.id" 
+        (tableContentStatusChange)="tableContentStatusChange($event)" [isEditsec]='true'></app-datadialog>
+        <button type="button" class="btn btn-default" (click)="deleteItem(element.id)">
+          
+          <!-- Remove/Delete Option -->
+          <span class="glyphicon glyphicon-remove removeColor"></span></button>
+       </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayColumnHeader"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumnHeader;"></mat-row>
+  </mat-table>
+
+   <!-- Paginator-->
+   <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 15, 20]">
+   </mat-paginator>
+</div>

@@ -1,0 +1,23 @@
+
+
+<form #loginForm="ngForm" (keydown)="keyDownFunction($event)">
+  <div [hidden]="loginForm.submitted">
+    <br/><br/>
+    <div class="row">
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+        <mat-card>
+          <h2>PRESBYTERIAN</h2><br/>
+        <app-input-box [label]="'User name:'" [id]="'username'" (ivaluechange)='valuechange($event)' [type]="'text'"></app-input-box>
+        <app-input-box [label]="'Password:'" [id]="'password'" (ivaluechange)='valuechange($event)' [type]="'password'"></app-input-box>
+        <div *ngIf="isError" class="panel panel-danger">
+          <div class="panel-heading">Login Failed. Invalid Username or password.</div>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="loginData()">Login</button>
+      </mat-card>
+      <br/><br/>
+      </div>
+    </div>
+  </div>
+</form>
