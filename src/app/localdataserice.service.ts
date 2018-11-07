@@ -9,28 +9,28 @@ export class LocaldatasericeService implements InMemoryDbService {
       interviewdate: '12/19/2017',
       interviewtime: '8.30AM',
       interviewtype: 'Phone',
-      primaryinterviewer: 'Michael Phipps'
+      primaryinterviewer: 'John Glenn'
     },
     {
       id: 2,
       interviewdate: '01/19/2018',
       interviewtime: '9.30AM',
       interviewtype: 'Skype',
-      primaryinterviewer: 'Frances Donio'
+      primaryinterviewer: 'Christopher'
     },
     {
       id: 3,
       interviewdate: '01/06/2018',
       interviewtime: '11.30AM',
       interviewtype: 'In-person',
-      primaryinterviewer: 'Jeannine Linsday'
+      primaryinterviewer: 'Jenni'
     },
     {
       id: 4,
       interviewdate: '01/09/2018',
       interviewtime: '9.40AM',
       interviewtype: 'Skype',
-      primaryinterviewer: 'Matt Greathouse'
+      primaryinterviewer: 'Cathy'
     }
     ]
     const existingApplicantObj = [{

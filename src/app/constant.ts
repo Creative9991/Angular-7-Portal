@@ -3,20 +3,20 @@ export let tabledataObject = [{
     interviewdate: '02/10/2018',
     interviewtime: '12:00 P.M',
     interviewtype: 'Skype',
-    primaryinterviewer: 'Jeannine Linsday'
+    primaryinterviewer: 'Christopher'
   },
   {
     id: 2,
     interviewdate: '02/23/2018',
     interviewtime: '02:30 P.M',
     interviewtype: 'In Person',
-    primaryinterviewer: 'Matt Greathouse'
+    primaryinterviewer: 'Matt Damon'
   },
   { id : 3,
     interviewdate : '03/23/2018',
     interviewtime: '01:30 P.M',
     interviewtype : 'Skype',
-    primaryinterviewer: 'Soyal Momin'
+    primaryinterviewer: 'Patekar'
   }
 ]
 export let existingApplicantObj = [{
