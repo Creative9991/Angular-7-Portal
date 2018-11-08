@@ -1,28 +1,26 @@
-<!-- Navigation Html Page-->
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" (click)="menuClick()" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!--Navigation Header-->
-      
-      <a class="navbar-brand" routerLink="/menu">Portal</a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" (click)="menuClick()" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!--Navigation Header-->
+            
+            <a class="navbar-brand" routerLink="/menu">Portal</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><a routerLink="#"></a></li>
+          <li><a routerLink="/status">Status</a></li>
+          <li><a routerLink="/affiliation">Affiliation</a></li>
+          <li><a routerLink="/position">Position</a></li>
+          <li><a routerLink="/alternativeposition">Alternative position</a></li>
+          <li><a routerLink="/team">Team</a></li>
+          <li></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><a routerLink="/login">&nbsp;Log out</a></a></li>
+      </ul>
     </div>
-    <div [ngClass]="{'collapse navbar-collapse': !collapsed,'expand navbar-expand':!!collapsed}" id = "collapseMenu">
-
-      <!-- Navigation List Url/Paths-->
-    <ul class="nav navbar-nav">
-      <li><a routerLink="#"></a></li>
-      <li><a routerLink="/status">Status</a></li>
-      <li><a routerLink="/affiliation">Affiliation</a></li>
-      <li><a routerLink="/position">Position</a></li>
-      <li><a routerLink="/alternativeposition">Alternative position</a></li>
-      <li><a routerLink="/team">Team</a></li>
-      <li><a routerLink="/login">Log out</a></li>
-    </ul>
-  </div>
-</div>
-</nav>
+  </nav>

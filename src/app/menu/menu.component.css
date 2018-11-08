@@ -1,9 +1,24 @@
-.col-lg-6 {
+.col-lg-4 {
     text-align: center;
     border: 1px solid black;
     border-radius: 10px;
-    background-color:rgb(190, 149, 149);   
+    background-color:rgb(190, 149, 149); 
+     
+}
+mat-card{
+    height : 300px;
+    width : 300px;
+    text-align: center; 
 }
 button{
     padding: center;
+}
+mat-toolbar{
+    text-align: center;
+}
+.first{
+    background-color: bisque;
+}
+.second{
+    background-color: burlywood;
 }
