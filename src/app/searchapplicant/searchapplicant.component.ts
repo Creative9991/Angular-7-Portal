@@ -16,6 +16,7 @@ export class SearchapplicantComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.ExistingData);
   }
   search(data:string):void{
     if(data.length>0){
@@ -26,6 +27,6 @@ export class SearchapplicantComponent implements OnInit {
   }
   getApplicantData():void{
     this.constantdataService.getExistingApplicant().subscribe(dataObj => {this.ExistingDataAssign = dataObj; this.ExistingData=this.ExistingDataAssign;});
-   
+
   }
 }

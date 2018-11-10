@@ -22,26 +22,31 @@ export let tabledataObject = [{
 export let existingApplicantObj = [{
   id: 1,
   name: 'Christopher',
-  Position:'Frontend Developer'
+  Position:'Frontend Developer',
+  Date: "01/03/2019"
 },{
   id: 2,
   name: 'Christian Bale',
-  Position:'SAS Developer'
+  Position:'SAS Developer',
+  Date: "01/03/2019"
 },
 {
   id: 3,
   name: 'Alfred',
-  Position:'Java Developer'
+  Position:'Java Developer',
+  Date: "01/03/2019"
 },
 {
   id: 4,
   name: 'Hans Zimmer',
-  Position:'Q&A'
+  Position:'Q&A',
+  Date: "01/03/2019"
 },
 {
   id: 5,
   name: 'Stanely Kubrick',
-  Position:'R&D'
+  Position:'R&D',
+  Date: "01/03/2019"
 },
 ]
 export let loginContent=[{

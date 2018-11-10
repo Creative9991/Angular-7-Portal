@@ -1,5 +1,6 @@
 export interface ExistingApplicant {
     id:number,
-    name:string;
-    Position: string;
+    name:string,
+    Position: string,
+    Date : string
   }

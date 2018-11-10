@@ -5,7 +5,8 @@
     color:#c00
 }
 .addremovedata{
-    height: 250px;
+    max-height: 500px;
+    min-height: 250px;
     overflow-y: scroll;
 }
 .col-lg-12{

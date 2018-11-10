@@ -4,5 +4,7 @@
     font-weight: bold;
 }
 ul{
-    float:left;
+    float: left;
+    margin: 0px;
+    padding: 0;
 }
