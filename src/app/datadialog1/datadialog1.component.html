@@ -1,0 +1,3 @@
+<button *ngIf="!isEditsec else editBlock" type="button" class="btn btn-default" (click)="openDialog()"><span class="glyphicon glyphicon-plus"></span> Add row</button>
+<ng-template #editBlock><button type="button" class="btn btn-default" (click)="openDialog()"><span class="glyphicon glyphicon-pencil"></span></button>
+</ng-template>

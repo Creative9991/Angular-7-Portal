@@ -26,6 +26,9 @@ export class ConstantdataService {
   getTables(): Observable<Element[]> {
    return this.http.get<any[]>('api/tabledataObject') 
   }
+  getExiTables() : Observable<Element[]>{
+    return this.http.get<any[]>('api/existingApplicantObj')
+  }
   setTables(data): void {
   }
   checkvalidLogin(data: any): any {

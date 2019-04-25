@@ -1,26 +1,29 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Dialogcontent } from './dialogcontent'
+import { Dialogcontent1 } from './dialogcontent1'
 import { Element } from '../tableData'
 import { ConstantdataService } from '../constantdata.service';
 @Component({
-  selector: 'app-datadialog',
-  templateUrl: './datadialog.component.html',
-  styleUrls: ['./datadialog.component.css']
+  selector: 'app-datadialog1',
+  templateUrl: './datadialog1.component.html',
+  styleUrls: ['./datadialog1.component.css']
 })
-export class DatadialogComponent {
+export class Datadialog1Component implements OnInit {
   @Input() isEditsec: boolean;
   @Input() tableContent: any;
   @Output() tableContentStatusChange = new EventEmitter<Element>();
   @Input() itemid: Number;
   dataObj: Element = {
-    id: 0,
-    interviewdate: '',
+    id : 0,
+    interviewdate : '',
     interviewtime: '',
-    interviewtype: '',
+    interviewtype : '',
     primaryinterviewer: ''
+
   }
-  constructor(public dialog: MatDialog, public constantdataService: ConstantdataService) {
+  constructor(public dialog: MatDialog, public constantdataService: ConstantdataService,) { }
+
+  ngOnInit() {
   }
   openDialog(): void {
     var data;
@@ -29,10 +32,10 @@ export class DatadialogComponent {
     } else {
       data = this.dataObj;
     }
-    let dialogRef = this.dialog.open(Dialogcontent, {
+    let dialogRef = this.dialog.open(Dialogcontent1, {
       width: '450px',
-      data: data,
-     
+      height : '500px',
+      data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -42,5 +45,4 @@ export class DatadialogComponent {
       }
     });
   }
-
 }

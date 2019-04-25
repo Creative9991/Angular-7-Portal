@@ -28,6 +28,8 @@ import { SearchapplicantComponent } from './searchapplicant/searchapplicant.comp
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { LocaldatasericeService }  from './localdataserice.service';
+import { Datadialog1Component } from './datadialog1/datadialog1.component';
+import { Dialogcontent1} from './datadialog1/dialogcontent1';
 
 @NgModule({
   declarations: [
@@ -46,9 +48,11 @@ import { LocaldatasericeService }  from './localdataserice.service';
     DisplaytableComponent,
     DatadialogComponent,
     Dialogcontent,
+    Dialogcontent1,
     LoginComponent,
     SearchapplicantComponent,
-    MenuComponent
+    MenuComponent,
+    Datadialog1Component
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,7 @@ import { LocaldatasericeService }  from './localdataserice.service';
     LocaldatasericeService, { dataEncapsulation: false }
     )
   ],
-  entryComponents: [DatadialogComponent, Dialogcontent],
+  entryComponents: [DatadialogComponent, Dialogcontent, Dialogcontent1,Datadialog1Component],
   providers: [ConstantdataService],
   bootstrap: [AppComponent]
 })
